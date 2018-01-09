@@ -7,9 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "bin": {
+    "image-optimizer-cli": "index.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stuntcoders/image-optimizer-cli.git"
+    "url": "https://github.com/stuntcoders/image-optimizer-cli"
   },
   "author": "Mladen Ilic",
   "bugs": {
@@ -19,5 +22,6 @@
   "dependencies": {
     "glob": "^7.1.2",
     "minimist": "^1.2.0"
-  }
+  },
+  "license": "MIT"
 }
