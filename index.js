@@ -12,7 +12,10 @@ if (!path) {
   return usage();
 }
 
-crawl(path, file => optimize(file)
+global.argv.limit = global.argv.limit || 0;
+
+crawl(path, (file, stat) => {
+  optimize(file, stat)
   .then(result => log(file, result))
   .catch(error => console.error(error))
-);
+});
